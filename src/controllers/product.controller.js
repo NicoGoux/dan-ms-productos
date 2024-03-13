@@ -1,4 +1,5 @@
 import { ProductService } from '../service/product.service.js';
+import cLog from '../utils/cLog.js';
 
 const productService = ProductService.getInstance();
 

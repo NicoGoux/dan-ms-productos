@@ -1,7 +1,16 @@
 import { OrderService } from '../service/order.service.js';
+import cLog from '../utils/cLog.js';
 
 const orderService = OrderService.getInstance();
 
+/**
+ * Recibe los siguientes filtros:
+ * @supplierId id del proveedor
+ * @genMinDate fecha minima de generacion
+ * @genMaxDate fecha maxima de generacion
+ * @recMinDate fecha minima de recepcion
+ * @recMaxDate fecha maxima de recepcion
+ */
 const getOrders = async (req, res) => {
 	try {
 		const query = req.query;
